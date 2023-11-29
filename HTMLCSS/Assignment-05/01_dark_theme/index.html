@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div id="app" class="day">
+        <p>I am a student of medicaps university pursuing MCA</p>
+        <button class="button_day" onclick=swapTheme() id="swap">Change Theme</button>
+     </div>
+</body>
+<script>
+    function swapTheme(){
+        let status=document.getElementById('app').classList.value;
+        if(status=='day'){
+        document.getElementById('app').classList.remove('day')
+        document.getElementById('swap').classList.remove('button_day')
+        document.getElementById('app').classList.add('night')
+        document.getElementById('swap').classList.add('button_night')
+        }
+        else{
+        document.getElementById('app').classList.remove('night')
+        document.getElementById('swap').classList.remove('button_night')
+        document.getElementById('app').classList.add('day')
+        document.getElementById('swap').classList.add('button_day')
+        }
+        
+    }
+</script>
+</html>
